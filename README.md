@@ -48,4 +48,10 @@ I build scalable systems, participate in hackathons, and focus on creating real-
 
 ---
 
+## 📷Previews
+<img width="1790" height="907" alt="image" src="https://github.com/user-attachments/assets/de20d78b-1333-4e67-a7da-876384ae7592" />
+<img width="1901" height="914" alt="image" src="https://github.com/user-attachments/assets/2c4c0536-d16c-4ef1-b747-28fb62fad154" />
+<img width="1920" height="920" alt="image" src="https://github.com/user-attachments/assets/1dd98b37-e8ac-4f4c-b535-a321e05fc6a3" />
+
+
 ⭐ If you like this project, consider giving it a star!
