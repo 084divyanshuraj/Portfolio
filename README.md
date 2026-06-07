@@ -9,7 +9,7 @@ https://084divyanshuraj.github.io/Portfolio/
 
 ## 👨‍💻 About Me
 
-I am a 2nd year CSE student passionate about Web Development and Artificial Intelligence.
+I am a 3rd year CSE student passionate about Web Development and Artificial Intelligence.
 I build scalable systems, participate in hackathons, and focus on creating real-world impactful solutions.
 
 ---
