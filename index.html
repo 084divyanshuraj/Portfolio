@@ -46,6 +46,25 @@
             position: relative;
         }
 
+        /* Custom Cyberpunk Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(10, 10, 10, 0.9);
+            border-left: 1px solid rgba(230, 57, 70, 0.3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-red);
+            border-left: 1px solid rgba(230, 57, 70, 0.8);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-gold);
+        }
+
         /* Circuit Board Background */
         body::before {
             content: '';
