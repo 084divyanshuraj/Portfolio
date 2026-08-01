@@ -691,6 +691,74 @@
             font-family: var(--font-headings);
             font-size: 0.9rem;
         }
+        /* Secondary Archive Section */
+        .archive-expanded-container {
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .archive-expanded-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out, margin-top 0.8s ease-in-out;
+            width: 100%;
+            margin-top: 0;
+        }
+
+        .archive-expanded-content.expanded {
+            max-height: 4000px;
+            opacity: 1;
+            margin-top: 30px;
+        }
+
+        .projects-grid-compact {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .projects-grid-compact .project-card {
+            padding: 20px;
+        }
+
+        .projects-grid-compact .project-title {
+            font-size: 1.1rem;
+        }
+
+        .projects-grid-compact .project-desc {
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .projects-grid-compact .project-links {
+            padding-top: 10px;
+        }
+
+        .expand-archive-btn {
+            background: transparent;
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            padding: 10px 20px;
+            font-family: var(--font-headings);
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 0 10px rgba(244, 162, 97, 0.1);
+            letter-spacing: 1px;
+        }
+
+        .expand-archive-btn:hover {
+            background: rgba(244, 162, 97, 0.1);
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+            box-shadow: 0 0 15px var(--primary-red-glow);
+            text-shadow: 0 0 8px var(--primary-red-glow);
+        }
 
         /* Certifications Section */
         .certs-container {
@@ -1209,6 +1277,14 @@
                             <a href="https://github.com/084divyanshuraj/FinDNA" target="_blank">[ LAUNCH REPO ] ↗</a>
                         </div>
                     </div>
+                </div> <!-- End main projects-grid -->
+
+                <div class="archive-expanded-container">
+                    <button id="expandArchiveBtn" class="expand-archive-btn">[ EXPAND_ARCHIVE ▼ ]</button>
+                    
+                    <div id="archiveExpandedContent" class="archive-expanded-content">
+                        <h3 class="section-title" style="display: block; text-align: center; font-size: 1.2rem; border-bottom: none; margin-bottom: 30px; margin-left: auto; margin-right: auto; width: fit-content;">[ ARCHIVE_EXPANDED // MORE_EXPERIMENTS ]</h3>
+                        <div class="projects-grid-compact">
 
                     <div class="hud-box project-card">
                         <div class="project-header">
@@ -1335,7 +1411,10 @@
                         </div>
                     </div>
 
-                </div>
+                        </div> <!-- End projects-grid-compact -->
+                    </div> <!-- End archive-expanded-content -->
+                </div> <!-- End archive-expanded-container -->
+
             </div>
         </section>
 
@@ -1530,6 +1609,20 @@
         document.querySelectorAll('.fade-in').forEach(element => {
             observer.observe(element);
         });
+
+        // Archive Expand Toggle
+        const expandBtn = document.getElementById('expandArchiveBtn');
+        const archiveContent = document.getElementById('archiveExpandedContent');
+        if (expandBtn && archiveContent) {
+            expandBtn.addEventListener('click', () => {
+                archiveContent.classList.toggle('expanded');
+                if (archiveContent.classList.contains('expanded')) {
+                    expandBtn.textContent = '[ COLLAPSE_ARCHIVE ▲ ]';
+                } else {
+                    expandBtn.textContent = '[ EXPAND_ARCHIVE ▼ ]';
+                }
+            });
+        }
     </script>
 </body>
 
