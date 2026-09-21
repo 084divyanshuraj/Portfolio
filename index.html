@@ -608,38 +608,97 @@
         }
 
         /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .projects-featured-list {
+            display: flex;
+            flex-direction: column;
             gap: 30px;
+            margin-bottom: 30px;
+            width: 100%;
         }
 
         .project-featured {
-            grid-column: 1 / -1;
-            display: block;
+            display: flex;
+            flex-direction: column;
             background: linear-gradient(135deg, rgba(20, 20, 20, 0.8), rgba(40, 10, 10, 0.8));
             border: 2px solid var(--primary-red);
             box-shadow: 0 0 20px rgba(230, 57, 70, 0.2);
+            padding: 28px;
+            width: 100%;
         }
 
-        .project-card {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-header {
+        .project-featured .project-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 15px;
             flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .project-featured .project-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .project-featured .project-tech {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
             gap: 10px;
         }
 
-        .project-title {
+        .project-featured .project-links {
+            margin-top: auto;
+            border-top: 1px dotted rgba(230, 57, 70, 0.3);
+            padding-top: 15px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        /* Regular Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Regular Project Cards */
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card:not(.project-featured) {
+            padding: 25px;
+        }
+
+        .project-card:not(.project-featured) .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+            gap: 12px;
+            min-height: 36px;
+            flex-wrap: wrap;
+        }
+
+        .project-card:not(.project-featured) .project-title {
             color: var(--text-main);
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+            line-height: 1.3;
         }
 
         .featured-badge,
@@ -652,6 +711,7 @@
             font-weight: bold;
             border-radius: 2px;
             letter-spacing: 1px;
+            white-space: nowrap;
         }
 
         .hackathon-badge {
@@ -667,31 +727,44 @@
             font-weight: bold;
             border-radius: 2px;
             letter-spacing: 1px;
+            white-space: nowrap;
         }
 
-        .project-desc {
-            font-size: 0.95rem;
+        .project-card:not(.project-featured) .project-desc {
+            font-size: 0.92rem;
             color: var(--text-muted);
+            line-height: 1.6;
             margin-bottom: 20px;
             flex-grow: 1;
         }
 
-        .project-tech {
+        .project-card:not(.project-featured) .project-tech {
+            margin-top: auto;
             margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            min-height: 56px;
+            align-content: flex-start;
         }
 
-        .project-links {
-            margin-top: auto;
+        .project-card:not(.project-featured) .project-links {
+            margin-top: 0;
             border-top: 1px dotted rgba(230, 57, 70, 0.3);
             padding-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .project-links a {
             display: inline-flex;
             align-items: center;
             font-family: var(--font-headings);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
         }
+
         /* Secondary Archive Section */
         .archive-expanded-container {
             margin-top: 40px;
@@ -718,25 +791,56 @@
 
         .projects-grid-compact {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
         }
 
         .projects-grid-compact .project-card {
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .projects-grid-compact .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
         .projects-grid-compact .project-title {
             font-size: 1.1rem;
+            color: var(--text-main);
         }
 
         .projects-grid-compact .project-desc {
             font-size: 0.85rem;
             margin-bottom: 15px;
+            line-height: 1.5;
+            color: var(--text-muted);
+            flex-grow: 1;
+        }
+
+        .projects-grid-compact .project-tech {
+            margin-top: auto;
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
         }
 
         .projects-grid-compact .project-links {
+            margin-top: 0;
+            border-top: 1px dotted rgba(230, 57, 70, 0.3);
             padding-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .expand-archive-btn {
@@ -1042,7 +1146,7 @@
             <div class="fade-in">
                 <h4 class="section-title">// INITIALIZING_SYSTEM...</h4>
                 <h1 class="hero-title">DIVYANSHU RAJ</h1>
-                <h2 class="hero-subtitle">> CS Student & Developer</h2>
+                <h2 class="hero-subtitle">> CS Student & Developer | ACM Member</h2>
                 <p class="hero-bio">
                     Accessing mainframe... User identified.<br>
                     I engineer technical solutions, train algorithmic structures, and build highly-resilient, full-stack
@@ -1060,11 +1164,11 @@
                         <span class="stat-label">CGPA</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-value">11+</span>
+                        <span class="stat-value">13+</span>
                         <span class="stat-label">Projects</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-value">180+</span>
+                        <span class="stat-value">200+</span>
                         <span class="stat-label">LeetCode</span>
                     </div>
                     <div class="stat-item">
@@ -1094,9 +1198,8 @@
                         </p>
                         <p>
                             I am a 3rd year B.Tech CSE student passionate about Web Development and Artificial Intelligence.
-                            I am an active hackathon participant, always seeking to push the boundaries of my technical
-                            abilities
-                            and build resilient systems under pressure.
+                            I am an active hackathon participant and an official member of the <strong>Association for Computing Machinery (ACM)</strong>, always seeking to push the boundaries of my technical
+                            abilities and build resilient, distributed systems under pressure.
                         </p>
                         <p>
                             Beyond code, I am a chess enthusiast, thinking multiple moves ahead. I also successfully
@@ -1111,6 +1214,10 @@
                             <tr>
                                 <th>Degree</th>
                                 <td>B.Tech CSE 2024-2028</td>
+                            </tr>
+                            <tr>
+                                <th>Affiliation</th>
+                                <td style="color: var(--accent-gold); font-weight: bold;">ACM Member (Association for Computing Machinery)</td>
                             </tr>
                             <tr>
                                 <th>Location</th>
@@ -1183,7 +1290,7 @@
         <!-- Experience Section -->
         <section id="experience">
             <div class="fade-in">
-                <h2 class="section-title">>> WORK EXPERIENCE</h2>
+                <h2 class="section-title">>> WORK EXPERIENCE & AFFILIATIONS</h2>
                 <div class="achievements-grid">
 
                     <div class="hud-box achievement-card">
@@ -1202,6 +1309,22 @@
                         </p>
                     </div>
 
+                    <div class="hud-box achievement-card">
+                        <div class="achievement-header">
+                            <span class="achievement-rank">ACTIVE MEMBER</span>
+                            <span class="achievement-icon">[⚡]</span>
+                        </div>
+                        <h3 class="achievement-title">ACM Student Member</h3>
+                        <div class="achievement-meta">
+                            <span>ORGANIZATION: Association for Computing Machinery (ACM)</span>
+                            <span>COMMUNITY: Global Computing Society / Student Chapter</span>
+                            <span>STATUS: Active Member</span>
+                        </div>
+                        <p class="achievement-desc">
+                            > Member of the world's premier computing society. Collaborating on cutting-edge computer science paradigms, participating in technical workshops, peer hackathons, and research symposiums.
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -1210,13 +1333,46 @@
         <section id="projects">
             <div class="fade-in">
                 <h2 class="section-title">## ACCESSING ARCHIVES</h2>
-                <div class="projects-grid">
+                <!-- Featured Projects -->
+                <div class="projects-featured-list">
+                    <!-- Featured Project: SatQuery AI -->
+                    <div class="hud-box project-card project-featured" style="border-color: #00f2ff; box-shadow: 0 0 25px rgba(0, 242, 255, 0.25);">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title" style="color: #00f2ff; text-shadow: 0 0 10px rgba(0, 242, 255, 0.6);">SATQUERY AI</h3>
+                                <p style="font-size: 0.8rem; color: var(--accent-gold); margin-top: 4px; font-family: var(--font-headings); letter-spacing: 1px;">
+                                    > ISRO PS-26167 // MULTIMODAL GEOSPATIAL INTELLIGENCE
+                                </p>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <span class="featured-badge" style="background: #00f2ff; color: #0a0a0a; font-weight: bold;">FEATURED PROTOCOL</span>
+                                <span class="hackathon-badge">SMART INDIA HACKATHON 2026</span>
+                                <span class="hackathon-badge" style="background: #ff9933; color: #0a0a0a; font-weight: bold;">ISRO SAC</span>
+                            </div>
+                        </div>
+                        <p class="project-desc">
+                            Next-Gen Agentic Vision-Language Workstation for Multimodal Satellite Earth Observation & Geospatial Intelligence. Transforms raw multispectral and radar (Sentinel-1/2 SAR & Optical) rasters into conversational insights backed by verifiable visual bounding coordinates, real-time 3D WebGL elevation twins, and automated PDF dossiers. Powered by a fine-tuned Qwen2.5-VL-7B foundation model adapted via 4-bit QLoRA.
+                        </p>
+                        <div class="project-tech skill-tags">
+                            <span class="skill-tag">Qwen2.5-VL-7B</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">React / Vite</span>
+                            <span class="skill-tag">WebGL 3D</span>
+                            <span class="skill-tag">SAR & Optical Fusion</span>
+                            <span class="skill-tag">Multilingual GeoNLP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/084divyanshuraj/SatQuery-AI-VLM" target="_blank">[ LAUNCH REPO ] ↗</a>
+                            <a href="https://sat-query-ai-vlm.vercel.app" target="_blank">[ LIVE WORKSTATION ] ↗</a>
+                        </div>
+                    </div>
 
-                    <!-- Featured Project -->
+                    <!-- Featured Project: DevDuck AI -->
                     <div class="hud-box project-card project-featured">
                         <div class="project-header">
                             <h3 class="project-title">DEVDUCK AI</h3>
-                            <div style="display: flex; gap: 10px;">
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                                 <span class="featured-badge">FEATURED PROTOCOL</span>
                                 <span class="hackathon-badge">QUACKATHON</span>
                             </div>
@@ -1234,34 +1390,32 @@
                             <span class="skill-tag">GitHub Actions</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/084divyanshuraj/DevDuck-AI" target="_blank"
-                                style="margin-right: 15px;">[ LAUNCH REPO ] ↗</a>
+                            <a href="https://github.com/084divyanshuraj/DevDuck-AI" target="_blank">[ LAUNCH REPO ] ↗</a>
                             <a href="https://dev-duck-ai.vercel.app/" target="_blank">[ LIVE DEMO ] ↗</a>
                         </div>
                     </div>
+                </div> <!-- End featured projects list -->
 
-                    <!-- Regular Projects -->
-                     <div class="hud-box project-card">
+                <!-- Regular Projects Grid -->
+                <div class="projects-grid">
+                    <div class="hud-box project-card">
                         <div class="project-header">
-                            <h3 class="project-title">DebateForge</h3>
-                            <span class="hackathon-badge">8-hrs Solo HACKATHON</span>
+                            <h3 class="project-title">DEBATEFORGE</h3>
+                            <span class="hackathon-badge">8-HRS SOLO HACKATHON</span>
                         </div>
                         <p class="project-desc">
-                            AI-powered EPC procurement and document-intelligence workspace. Integrates project
-                            documents, RFQs, vendor submissions, and risk analysis using Gemini-powered intelligence and
-                            FAISS semantic search.
+                            AI-powered debate trainer that stress-tests arguments through structured adversarial sparring against an opponent engineered to relentlessly probe reasoning weaknesses.
                         </p>
                         <div class="project-tech skill-tags">
                             <span class="skill-tag">React</span>
                             <span class="skill-tag">TypeScript</span>
                             <span class="skill-tag">Next.js</span>
-                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">TailwindCSS</span>
                             <span class="skill-tag">Gemini AI</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/084divyanshuraj/DebateForge" target="_blank"
-                                style="margin-right: 15px;">[ LAUNCH REPO ] ↗</a>
-                                <a href="https://debate-forge-one.vercel.app/" target="_blank">[ LIVE DEMO ] ↗</a>
+                            <a href="https://github.com/084divyanshuraj/DebateForge" target="_blank">[ LAUNCH REPO ] ↗</a>
+                            <a href="https://debate-forge-one.vercel.app/" target="_blank">[ LIVE DEMO ] ↗</a>
                         </div>
                     </div>
 
@@ -1271,9 +1425,7 @@
                             <span class="hackathon-badge">HACKATHON</span>
                         </div>
                         <p class="project-desc">
-                            AI-powered EPC procurement and document-intelligence workspace. Integrates project
-                            documents, RFQs, vendor submissions, and risk analysis using Gemini-powered intelligence and
-                            FAISS semantic search.
+                            AI-powered EPC procurement and document-intelligence workspace for data-centre projects, featuring RAG semantic search, vendor proposal ranking, and risk analytics.
                         </p>
                         <div class="project-tech skill-tags">
                             <span class="skill-tag">React</span>
@@ -1283,20 +1435,17 @@
                             <span class="skill-tag">PostgreSQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/084divyanshuraj/NEXORA" target="_blank"
-                                style="margin-right: 15px;">[ LAUNCH REPO ] ↗</a>
-                                
+                            <a href="https://github.com/084divyanshuraj/NEXORA" target="_blank">[ LAUNCH REPO ] ↗</a>
                         </div>
                     </div>
 
                     <div class="hud-box project-card">
                         <div class="project-header">
-                            <h3 class="project-title">CivLens</h3>
+                            <h3 class="project-title">CIVLENS</h3>
                             <span class="hackathon-badge">HACKATHON</span>
                         </div>
                         <p class="project-desc">
-                            Intelligent, gamified platform designed to revolutionize municipal infrastructure reporting.
-                            Leverages Gemini AI image analysis for predictive budget modeling.
+                            Intelligent, gamified platform designed to revolutionize municipal infrastructure reporting with Gemini AI vision analysis and predictive city budget modeling.
                         </p>
                         <div class="project-tech skill-tags">
                             <span class="skill-tag">Next.js</span>
@@ -1305,25 +1454,24 @@
                             <span class="skill-tag">TailwindCSS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/084divyanshuraj/CivLens" target="_blank"
-                                style="margin-right: 15px;">[ LAUNCH REPO ] ↗</a>
+                            <a href="https://github.com/084divyanshuraj/CivLens" target="_blank">[ LAUNCH REPO ] ↗</a>
                             <a href="https://civ-lens.vercel.app/" target="_blank">[ LIVE DEMO ] ↗</a>
                         </div>
                     </div>
 
                     <div class="hud-box project-card">
                         <div class="project-header">
-                            <h3 class="project-title">FinDNA</h3>
+                            <h3 class="project-title">FINDNA</h3>
                             <span class="hackathon-badge">HACKATHON</span>
                         </div>
                         <p class="project-desc">
-                            AI-based Financial Personality Analyser evaluating user spending patterns and risk tolerance
-                            using machine learning.
+                            AI-driven financial personality analyser evaluating user spending patterns, behavioural traits, and investment risk tolerance using machine learning models.
                         </p>
                         <div class="project-tech skill-tags">
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">Flask</span>
                             <span class="skill-tag">AI/ML</span>
+                            <span class="skill-tag">Scikit-Learn</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/084divyanshuraj/FinDNA" target="_blank">[ LAUNCH REPO ] ↗</a>
@@ -1481,7 +1629,7 @@
                     <div class="hud-box profile-card">
                         <h3>LeetCode</h3>
                         <div class="profile-handle">@divyanshuraj084</div>
-                        <div class="profile-stat">180+</div>
+                        <div class="profile-stat">200+</div>
                         <div
                             style="color: var(--text-muted); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">
                             Problems Solved</div>

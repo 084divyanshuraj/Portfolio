@@ -8,7 +8,7 @@ Welcome to my personal developer portfolio.
 
 ## 👨‍💻 About Me
 
-I am a 3rd year CSE student (B.Tech, 2024–2028) at Vignan University, passionate about Web Development and Artificial Intelligence. I'm an active hackathon participant, always pushing the boundaries of my technical abilities to build resilient, real-world systems.
+I am a 3rd year CSE student (B.Tech, 2024–2028) at Vignan University, passionate about Web Development and Artificial Intelligence. I'm an active hackathon participant and an official member of **ACM (Association for Computing Machinery)**, always pushing the boundaries of my technical abilities to build resilient, real-world systems.
 
 Beyond code, I'm a chess enthusiast and anchored my college's national-level cultural fest, **Mahotsav 2026**.
 
@@ -16,6 +16,7 @@ Beyond code, I'm a chess enthusiast and anchored my college's national-level cul
 |---|---|
 | **University** | Vignan University |
 | **Degree** | B.Tech CSE, 2024–2028 |
+| **Affiliation** | ACM Student Member (Association for Computing Machinery) |
 | **Location** | Patna, India |
 | **Status** | Open to Internships |
 
@@ -32,7 +33,10 @@ Beyond code, I'm a chess enthusiast and anchored my college's national-level cul
 
 ## 📂 Featured Projects
 
+* **[SatQuery AI](https://github.com/084divyanshuraj/SatQuery-AI-VLM)** *(Smart India Hackathon 2026 | ISRO SAC)* – Next-gen agentic vision-language workstation for multimodal satellite earth observation & geospatial intelligence. Powered by a fine-tuned Qwen2.5-VL-7B (4-bit QLoRA) foundation model with visual grounding coordinates, 3D WebGL terrain elevation twin, and Sentinel-1/2 SAR + optical fusion (ISRO PS-26167). `Qwen2.5-VL-7B` `Python` `FastAPI` `React` `WebGL` `ISRO Geospatial` — [Live Demo](https://sat-query-ai-vlm.vercel.app)
 * **[DevDuck AI](https://github.com/084divyanshuraj/DevDuck-AI)** *(Featured – Quackathon)* – AI-powered developer ecosystem that ingests your entire codebase, remembers past bugs, and acts as a 24/7 senior engineer. Voice-activated onboarding, architecture flowcharts, smart terminal wrapper, GitHub PR auto-reviewer. `Next.js` `Python` `Parcle API` `TailwindCSS` `GitHub Actions` — [Live Demo](https://dev-duck-ai.vercel.app/)
+* **[DebateForge](https://github.com/084divyanshuraj/DebateForge)** *(8-hrs Solo Hackathon – Hack Devengers 1.0)* – AI-powered debate trainer that stress-tests arguments through structured adversarial sparring against an opponent engineered to never concede. `React` `TypeScript` `Next.js` `TailwindCSS` `Gemini AI` — [Live Demo](https://debate-forge-one.vercel.app/)
+* **[NEXORA](https://github.com/084divyanshuraj/NEXORA)** *(Hackathon)* – AI-powered EPC procurement and document-intelligence workspace for data-centre projects with RAG semantic search and risk analytics. `React` `TypeScript` `FastAPI` `Gemini AI` `PostgreSQL`
 * **[CivLens](https://github.com/084divyanshuraj/CivLens)** *(Solo Hackathon)* – Gamified platform for municipal infrastructure reporting with Gemini AI image analysis and predictive budget modeling. `Next.js` `Firebase` `Gemini AI` `TailwindCSS` — [Live Demo](https://civ-lens.vercel.app/)
 * **[FinDNA](https://github.com/084divyanshuraj/FinDNA)** *(Hackathon)* – AI-based financial personality analyzer evaluating spending patterns and risk tolerance via ML. `Python` `Flask` `AI/ML`
 * **[Placement Predictor](https://github.com/084divyanshuraj/Student_placement_detection)** *(Hackathon)* – ML model predicting campus placement probability from academic and extracurricular metrics. `Python` `Pandas` `NumPy` `ML` — [Live Demo](https://student-placement-detection-9yfssrsme-anvitha98243s-projects.vercel.app/)
@@ -46,9 +50,10 @@ Beyond code, I'm a chess enthusiast and anchored my college's national-level cul
 
 ## 📊 Stats
 
-* 160+ problems solved on [LeetCode](https://leetcode.com/u/divyanshuraj084/) (@divyanshuraj084)
+* 200+ problems solved on [LeetCode](https://leetcode.com/u/divyanshuraj084/) (@divyanshuraj084)
 * 700+ problems solved on CodeChef (@vu_241fa04a48) — Highest Rating: 1120
-* 9+ projects shipped
+* 13+ projects shipped
+* ACM Student Member (Association for Computing Machinery)
 
 ---
 
@@ -66,6 +71,7 @@ Beyond code, I'm a chess enthusiast and anchored my college's national-level cul
 
 ## 🎖️ Achievements
 
+* **Member** — Association for Computing Machinery (ACM)
 * **1st Place** — Technical Quiz, VCODE 2026 (CSE Department, Vignan University)
 
 ---
