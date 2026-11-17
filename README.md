@@ -59,7 +59,7 @@ Beyond code, I'm a chess enthusiast and anchored my college's national-level cul
 
 ## 📊 Stats
 
-* 200+ problems solved on [LeetCode](https://leetcode.com/u/divyanshuraj084/) (@divyanshuraj084)
+* 240+ problems solved on [LeetCode](https://leetcode.com/u/divyanshuraj084/) (@divyanshuraj084)
 * 700+ problems solved on CodeChef (@vu_241fa04a48) — Highest Rating: 1120
 * 1 Research Paper Published & Presented (IEEE / ICOIICS 2026)
 * 13+ projects shipped
