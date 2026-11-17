@@ -4,8 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divyanshu Raj | Systems Online</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Divyanshu Raj | Systems Online — Developer & ACM Member</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Divyanshu Raj | Systems Online — Developer & ACM Member">
+    <meta name="description" content="Personal developer portfolio of Divyanshu Raj, 3rd year B.Tech CSE student at Vignan University & ACM member. Building resilient AI workstations, distributed web systems, and competitive programming solutions.">
+    <meta name="keywords" content="Divyanshu Raj, Developer Portfolio, AI, Machine Learning, SIH 2026, SatQuery AI, DevDuck AI, DebateForge, Nexora, Vignan University, ACM Member, Web Developer">
+    <meta name="author" content="Divyanshu Raj">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://084divyanshuraj.github.io/Portfolio/">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://084divyanshuraj.github.io/Portfolio/">
+    <meta property="og:site_name" content="Divyanshu Raj | Developer Hub">
+    <meta property="og:title" content="Divyanshu Raj | Systems Online — Developer & ACM Member">
+    <meta property="og:description" content="Explore featured AI projects (SatQuery AI, DevDuck AI, DebateForge), hackathon systems, competitive programming metrics, and certifications.">
+    <meta property="og:image" content="https://084divyanshuraj.github.io/Portfolio/photo.jpg">
+    <meta property="og:image:alt" content="Divyanshu Raj Profile & Portfolio">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://084divyanshuraj.github.io/Portfolio/">
+    <meta name="twitter:title" content="Divyanshu Raj | Systems Online — Developer & ACM Member">
+    <meta name="twitter:description" content="Explore featured AI projects (SatQuery AI, DevDuck AI, DebateForge), hackathon systems, competitive programming metrics, and certifications.">
+    <meta name="twitter:image" content="https://084divyanshuraj.github.io/Portfolio/photo.jpg">
+
+    <!-- Structured Data (JSON-LD) for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Divyanshu Raj",
+      "url": "https://084divyanshuraj.github.io/Portfolio/",
+      "image": "https://084divyanshuraj.github.io/Portfolio/photo.jpg",
+      "jobTitle": "Computer Science Student & Full Stack Developer",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Association for Computing Machinery (ACM)"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Vignan University"
+        }
+      ],
+      "sameAs": [
+        "https://github.com/084divyanshuraj",
+        "https://linkedin.com/in/divyanshu-raj-346668310",
+        "https://leetcode.com/u/divyanshuraj084/"
+      ],
+      "knowsAbout": [
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "FastAPI",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Data Structures and Algorithms"
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/png" sizes="128x128" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -178,6 +244,59 @@
         .nav-links li a:hover {
             border: var(--hud-border);
             background: rgba(230, 57, 70, 0.1);
+        }
+
+        /* Mobile Nav Toggle Button */
+        .nav-toggle {
+            display: none;
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid var(--primary-red);
+            color: var(--accent-gold);
+            padding: 7px 12px;
+            font-family: var(--font-headings);
+            font-size: 0.8rem;
+            cursor: pointer;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggle:hover {
+            border-color: var(--accent-gold);
+            color: #fff;
+            box-shadow: 0 0 10px var(--primary-red-glow);
+        }
+
+        .nav-toggle-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 16px;
+            height: 12px;
+        }
+
+        .nav-toggle-icon span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: var(--primary-red);
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggle.active .nav-toggle-icon span:nth-child(1) {
+            transform: translateY(5px) rotate(45deg);
+            background-color: var(--accent-gold);
+        }
+
+        .nav-toggle.active .nav-toggle-icon span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.active .nav-toggle-icon span:nth-child(3) {
+            transform: translateY(-5px) rotate(-45deg);
+            background-color: var(--accent-gold);
         }
 
         .status-badge {
@@ -865,6 +984,136 @@
             text-shadow: 0 0 8px var(--primary-red-glow);
         }
 
+        /* Research & Publications Section */
+        .papers-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+        }
+
+        .paper-card {
+            border: 2px solid #00f2ff;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.15), inset 0 0 15px rgba(0, 242, 255, 0.05);
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.85), rgba(10, 30, 40, 0.85));
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .paper-card:hover {
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.3), inset 0 0 20px rgba(0, 242, 255, 0.1);
+            border-color: #00f2ff;
+        }
+
+        .paper-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-bottom: 1px dashed rgba(0, 242, 255, 0.3);
+            padding-bottom: 15px;
+        }
+
+        .paper-title {
+            color: #fff;
+            font-size: 1.4rem;
+            line-height: 1.4;
+            text-shadow: 0 0 8px rgba(0, 242, 255, 0.4);
+        }
+
+        .paper-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .paper-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px 25px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            background: rgba(10, 10, 10, 0.5);
+            padding: 15px;
+            border-left: 3px solid #00f2ff;
+        }
+
+        .paper-meta-item strong {
+            color: var(--accent-gold);
+            font-family: var(--font-headings);
+            font-size: 0.82rem;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .paper-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 25px;
+        }
+
+        .paper-docs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .paper-doc-item {
+            position: relative;
+            border: 1px solid rgba(0, 242, 255, 0.3);
+            border-radius: 4px;
+            overflow: hidden;
+            background: rgba(15, 15, 15, 0.9);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .paper-doc-item:hover {
+            border-color: #00f2ff;
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .paper-doc-preview {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .paper-doc-item:hover .paper-doc-preview {
+            transform: scale(1.02);
+        }
+
+        .paper-doc-info {
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .paper-doc-title {
+            font-size: 0.85rem;
+            font-family: var(--font-headings);
+            color: var(--text-main);
+            letter-spacing: 0.5px;
+        }
+
+        .paper-doc-link {
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            font-family: var(--font-headings);
+            text-transform: uppercase;
+        }
+
         /* Certifications Section */
         .certs-container {
             display: flex;
@@ -1090,29 +1339,240 @@
 
         /* Media Queries */
         @media (max-width: 768px) {
-            .about-grid {
-                grid-template-columns: 1fr;
+            section {
+                padding: 60px 0;
+                min-height: auto;
             }
 
-            .profiles-grid {
-                grid-template-columns: 1fr;
+            .container {
+                padding: 0 16px;
             }
 
-            .hero-title {
-                font-size: 3rem;
+            /* Responsive Navbar */
+            .nav-toggle {
+                display: flex;
             }
 
             .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(12px);
+                border-bottom: 2px solid var(--primary-red);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8), 0 0 15px var(--primary-red-glow);
+                flex-direction: column;
+                padding: 15px 20px 20px;
+                gap: 8px;
                 display: none;
+                max-height: calc(100vh - 70px);
+                overflow-y: auto;
             }
 
-            /* Hide complicated nav on mobile for simplicity, or we can wrap it */
-            .stats-row {
-                justify-content: center;
+            .nav-links.open {
+                display: flex;
+                animation: cyberSlideDown 0.25s ease-out forwards;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links li a {
+                display: block;
+                padding: 12px 14px;
+                font-size: 0.95rem;
+                border: 1px solid rgba(230, 57, 70, 0.2);
+                background: rgba(20, 20, 20, 0.6);
+                border-radius: 2px;
+                width: 100%;
+            }
+
+            .nav-links li a:hover,
+            .nav-links li a:active {
+                background: rgba(230, 57, 70, 0.2);
+                border-color: var(--primary-red);
+                color: #fff;
+                padding-left: 20px;
+            }
+
+            /* Hero Responsiveness */
+            .hero-title {
+                font-size: clamp(2.2rem, 8vw, 3.2rem);
+                word-break: break-word;
+                letter-spacing: 1px;
+            }
+
+            .hero-subtitle {
+                font-size: clamp(1rem, 4vw, 1.3rem);
+            }
+
+            .hero-bio {
+                font-size: 1rem;
+                margin-bottom: 30px;
             }
 
             .cta-container {
                 flex-direction: column;
+                width: 100%;
+                gap: 12px;
+                margin-bottom: 35px;
+            }
+
+            .cta-container .btn {
+                width: 100%;
+            }
+
+            .stats-row {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .stat-value {
+                font-size: 1.7rem;
+            }
+
+            /* About Grid & Reticle (Prevent Horizontal Overflow) */
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .photo-container {
+                width: 240px;
+                height: 240px;
+                max-width: 75vw;
+                max-height: 75vw;
+            }
+
+            .reticle {
+                width: 280px;
+                height: 280px;
+                max-width: 90vw;
+                max-height: 90vw;
+            }
+
+            .details-table th,
+            .details-table td {
+                padding: 10px 8px;
+                font-size: 0.88rem;
+                word-break: break-word;
+            }
+
+            /* Unified 1-Column Responsive Grids */
+            .skills-grid,
+            .projects-grid,
+            .projects-grid-compact,
+            .cert-tier-1,
+            .achievements-grid,
+            .profiles-grid,
+            .paper-docs {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card:not(.project-featured) .project-tech {
+                min-height: auto;
+            }
+
+            .project-featured {
+                padding: 20px 16px;
+            }
+
+            .project-featured .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .paper-card {
+                padding: 20px 16px;
+            }
+
+            .paper-title {
+                font-size: 1.15rem;
+            }
+
+            .paper-meta-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 12px;
+            }
+
+            .profile-card {
+                padding: 25px 15px;
+            }
+
+            .profile-stat {
+                font-size: 2.5rem;
+            }
+
+            /* Contact Box & Links */
+            .contact-box {
+                padding: 25px 16px;
+            }
+
+            .contact-box h2 {
+                font-size: 1.8rem;
+            }
+
+            .contact-box p {
+                font-size: 0.95rem;
+                margin-bottom: 25px;
+            }
+
+            .contact-links {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                width: 100%;
+            }
+
+            .contact-link {
+                width: 100%;
+                height: 85px;
+            }
+        }
+
+        @keyframes cyberSlideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 14px;
+            }
+
+            .status-badge {
+                font-size: 0.68rem;
+                padding: 4px 6px;
+                letter-spacing: 0.5px;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+
+            .hud-box {
+                padding: 18px 14px;
+            }
+
+            .contact-links {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-link:last-child {
+                grid-column: span 2;
             }
         }
     </style>
@@ -1126,12 +1586,21 @@
                 <div class="pulse-dot"></div>
                 OPEN TO INTERNSHIPS
             </div>
-            <ul class="nav-links">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation" aria-expanded="false">
+                <span class="nav-toggle-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="nav-toggle-label">MENU</span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#hero">[ INTEL ]</a></li>
                 <li><a href="#about">[ SYSTEMS ]</a></li>
                 <li><a href="#skills">[ SKILLS ]</a></li>
                 <li><a href="#experience">[ EXPERIENCE ]</a></li>
                 <li><a href="#projects">[ ARCHIVES ]</a></li>
+                <li><a href="#research">[ PAPERS ]</a></li>
                 <li><a href="#certs">[ LOGS ]</a></li>
                 <li><a href="#achievements">[ MISSIONS ]</a></li>
                 <li><a href="#contact">[ COMMS ]</a></li>
@@ -1189,7 +1658,7 @@
                         <div class="photo-frame"></div>
                         <div class="photo-overlay"></div>
                         
-                        <img src="photo.jpg" alt="Divyanshu Raj" class="profile-pic"
+                        <img src="photo.jpg" alt="Divyanshu Raj" class="profile-pic" width="320" height="320" decoding="async"
                             onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22320%22 height=%22320%22 viewBox=%220 0 320 320%22%3E%3Crect width=%22320%22 height=%22320%22 fill=%22%23111%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22Orbitron,sans-serif%22 font-size=%2220%22 fill=%22%23e63946%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ENO_IMAGE_DATA%3C/text%3E%3C/svg%3E'">
                     </div>
                     <div class="about-content hud-box">
@@ -1618,11 +2087,96 @@
             </div>
         </section>
 
+        <!-- Research & Publications Section -->
+        <section id="research">
+            <div class="fade-in">
+                <h2 class="section-title">++ RESEARCH_PROTOCOLS // PUBLICATIONS</h2>
+                <div class="papers-grid">
+
+                    <div class="hud-box paper-card">
+                        <div class="paper-header">
+                            <div>
+                                <h3 class="paper-title">AI-Based Congestion Prediction and Adaptive Traffic Management</h3>
+                                <p style="font-size: 0.82rem; color: #00f2ff; margin-top: 5px; font-family: var(--font-headings); letter-spacing: 1px;">
+                                    > 5TH INTL. CONFERENCE ON INTELLIGENT COMPUTING, INFORMATION AND CONTROL SYSTEMS (ICOIICS 2026)
+                                </p>
+                            </div>
+                            <div class="paper-badges">
+                                <span class="featured-badge" style="background: #00f2ff; color: #0a0a0a;">IEEE / ICOIICS 2026</span>
+                                <span class="hackathon-badge" style="background: #2ec4b6; color: #0a0a0a;">ACCEPTED & PRESENTED</span>
+                                <span class="hackathon-badge">PAPER ID: ICOIICS_250</span>
+                            </div>
+                        </div>
+
+                        <div class="paper-meta-grid">
+                            <div class="paper-meta-item">
+                                <strong>CONFERENCE & SPONSORSHIP</strong>
+                                <span>ICOIICS 2026 | Technically Supported by IEEE & Electron Devices Society (EDS)</span>
+                            </div>
+                            <div class="paper-meta-item">
+                                <strong>ORGANIZER & VENUE</strong>
+                                <span>Nepal College of Information Technology (Pokhara Univ.), Lalitpur, Nepal</span>
+                            </div>
+                            <div class="paper-meta-item">
+                                <strong>CONFERENCE DATES</strong>
+                                <span>Presented October 22 – 24, 2026</span>
+                            </div>
+                            <div class="paper-meta-item">
+                                <strong>AUTHORS & COLLABORATORS</strong>
+                                <span>C. Ruchir Venkata Chowdary, Jayant Kumar, Sneh Ranjan, Sagar Kumbhakar, <strong>Divyanshu Raj</strong>, Dr. J. Vijitha Ananthi</span>
+                            </div>
+                        </div>
+
+                        <p class="paper-desc">
+                            > Research paper proposing an intelligent, predictive traffic control and congestion management architecture leveraging AI algorithms to adapt signal timings dynamically, optimize vehicular flow, and minimize urban congestion bottlenecks across high-density arterial corridors.
+                        </p>
+
+                        <div class="skill-tags" style="margin-bottom: 25px;">
+                            <span class="skill-tag">AI & Machine Learning</span>
+                            <span class="skill-tag">Predictive Modeling</span>
+                            <span class="skill-tag">Adaptive Traffic Control</span>
+                            <span class="skill-tag">Intelligent Computing</span>
+                            <span class="skill-tag">Urban Automation</span>
+                            <span class="skill-tag">IEEE ICOIICS 2026</span>
+                        </div>
+
+                        <h4 style="color: var(--accent-gold); font-family: var(--font-headings); font-size: 0.9rem; margin-bottom: 15px; letter-spacing: 1px;">
+                            // VERIFICATION_LOGS: CERTIFICATE & ACCEPTANCE
+                        </h4>
+
+                        <div class="paper-docs">
+                            <a href="paper-presentation-cert.jpg" target="_blank" class="paper-doc-item">
+                                <img src="paper-presentation-cert.jpg" alt="Certificate of Presentation - Divyanshu Raj" class="paper-doc-preview" loading="lazy">
+                                <div class="paper-doc-info">
+                                    <span class="paper-doc-title">Certificate of Presentation</span>
+                                    <span class="paper-doc-link">[ VIEW FULL ↗ ]</span>
+                                </div>
+                            </a>
+
+                            <a href="paper-acceptance-letter.jpg" target="_blank" class="paper-doc-item">
+                                <img src="paper-acceptance-letter.jpg" alt="Letter of Acceptance - Paper ID ICOIICS_250" class="paper-doc-preview" loading="lazy">
+                                <div class="paper-doc-info">
+                                    <span class="paper-doc-title">Letter of Acceptance</span>
+                                    <span class="paper-doc-link">[ VIEW FULL ↗ ]</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="project-links" style="border-top: 1px dotted rgba(0, 242, 255, 0.3); padding-top: 15px;">
+                            <a href="paper-presentation-cert.jpg" target="_blank">[ LAUNCH PRESENTATION CERTIFICATE ] ↗</a>
+                            <a href="paper-acceptance-letter.jpg" target="_blank" style="margin-left: 15px;">[ LAUNCH ACCEPTANCE LETTER ] ↗</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!-- Coding Profiles -->
         <section id="profiles">
             <div class="fade-in">
                 <h2 class="section-title">
-                    < ALGOMETRICS>
+                    &lt; ALGOMETRICS &gt;
                 </h2>
                 <div class="profiles-grid">
 
@@ -1719,6 +2273,67 @@
             <div class="fade-in">
                 <h2 class="section-title">*** MISSION LOGS ***</h2>
                 <div class="achievements-grid">
+
+                    <div class="hud-box achievement-card">
+                        <div class="achievement-header">
+                            <span class="achievement-rank">RANK 1</span>
+                            <span class="achievement-icon">[★]</span>
+                        </div>
+                        <h3 class="achievement-title">Agentic AI Hackathon</h3>
+                        <div class="achievement-meta">
+                            <span>DOMAIN: Autonomous AI Agents & Real-World Systems</span>
+                            <span>PROJECT: University Master Agent</span>
+                        </div>
+                        <p class="achievement-desc">
+                            > Secured Rank 1 by engineering an autonomous Master Agent for university operations, fine-tuned and trained on real-world university datasets to automate and streamline academic administration.
+                        </p>
+                    </div>
+
+                    <div class="hud-box achievement-card">
+                        <div class="achievement-header">
+                            <span class="achievement-rank">1ST PLACE</span>
+                            <span class="achievement-icon">[★]</span>
+                        </div>
+                        <h3 class="achievement-title">HackXelarate 2026</h3>
+                        <div class="achievement-meta">
+                            <span>EVENT: Internal University-Level Hackathon</span>
+                            <span>ORGANIZER: Vignan University</span>
+                            <span>PROJECT: Pratibha</span>
+                        </div>
+                        <p class="achievement-desc">
+                            > Clinched 1st position in HackXelarate 2026 with Pratibha, competing across intense design and sprint cycles to engineer an impactful software solution under strict time constraints.
+                        </p>
+                    </div>
+
+                    <div class="hud-box achievement-card">
+                        <div class="achievement-header">
+                            <span class="achievement-rank">TOP 50 / 350+ TEAMS</span>
+                            <span class="achievement-icon">[⚡]</span>
+                        </div>
+                        <h3 class="achievement-title">SIH Internal Hackathon</h3>
+                        <div class="achievement-meta">
+                            <span>EVENT: Smart India Hackathon (SIH) Internal Selection</span>
+                            <span>PROJECT: SatQuery AI (ISRO SAC PS-26167)</span>
+                        </div>
+                        <p class="achievement-desc">
+                            > Ranked among the Top 50 teams out of 350+ competing teams with SatQuery AI — an agentic vision-language workstation for multimodal satellite earth observation and geospatial intelligence.
+                        </p>
+                    </div>
+
+                    <div class="hud-box achievement-card">
+                        <div class="achievement-header">
+                            <span class="achievement-rank">TOP 33% GLOBAL</span>
+                            <span class="achievement-icon">[◈]</span>
+                        </div>
+                        <h3 class="achievement-title">Quackathon (International Hackathon)</h3>
+                        <div class="achievement-meta">
+                            <span>EVENT: Global International Hackathon</span>
+                            <span>PROJECT: DevDuck AI</span>
+                        </div>
+                        <p class="achievement-desc">
+                            > Achieved Top 33% standing globally alongside my team with DevDuck AI — an AI-powered developer ecosystem featuring codebase ingestion, persistent bug memory, and automated GitHub PR reviews.
+                        </p>
+                    </div>
 
                     <div class="hud-box achievement-card">
                         <div class="achievement-header">
@@ -1820,6 +2435,46 @@
                     expandBtn.textContent = '[ COLLAPSE_ARCHIVE ▲ ]';
                 } else {
                     expandBtn.textContent = '[ EXPAND_ARCHIVE ▼ ]';
+                }
+            });
+        }
+
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = navLinks.classList.toggle('open');
+                navToggle.classList.toggle('active', isOpen);
+                navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            // Auto-close on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    navToggle.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // Close on outside click
+            document.addEventListener('click', (e) => {
+                if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+                    navLinks.classList.remove('open');
+                    navToggle.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Close on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+                    navLinks.classList.remove('open');
+                    navToggle.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
                 }
             });
         }

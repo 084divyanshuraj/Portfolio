@@ -48,10 +48,20 @@ Beyond code, I'm a chess enthusiast and anchored my college's national-level cul
 
 ---
 
+## 📑 Research & Conference Papers
+
+* **AI-Based Congestion Prediction and Adaptive Traffic Management** — *5th International Conference on Intelligent Computing, Information and Control Systems (ICOIICS 2026)* in technical collaboration with **IEEE** & **Electron Devices Society (EDS)**. Organised by Nepal College of Information Technology (Pokhara University), Lalitpur, Nepal (Oct 22–24, 2026). `Paper ID: ICOIICS_250`
+  * **Authors:** Chadalavada Ruchir Venkata Chowdary, Jayant Kumar, Sneh Ranjan, Sagar Kumbhakar, **Divyanshu Raj**, Dr. J. Vijitha Ananthi
+  * **Status:** Accepted & Successfully Presented
+  * **Verification:** [Presentation Certificate](paper-presentation-cert.jpg) | [Letter of Acceptance](paper-acceptance-letter.jpg)
+
+---
+
 ## 📊 Stats
 
 * 200+ problems solved on [LeetCode](https://leetcode.com/u/divyanshuraj084/) (@divyanshuraj084)
 * 700+ problems solved on CodeChef (@vu_241fa04a48) — Highest Rating: 1120
+* 1 Research Paper Published & Presented (IEEE / ICOIICS 2026)
 * 13+ projects shipped
 * ACM Student Member (Association for Computing Machinery)
 
@@ -71,8 +81,12 @@ Beyond code, I'm a chess enthusiast and anchored my college's national-level cul
 
 ## 🎖️ Achievements
 
-* **Member** — Association for Computing Machinery (ACM)
+* **Rank 1** — Agentic AI Hackathon (Engineered autonomous University Master Agent trained on real-world university datasets)
+* **1st Place** — HackXelarate 2026 (Internal university-level hackathon at Vignan University, Project: Pratibha)
+* **Top 50 Teams (out of 350+)** — Smart India Hackathon (SIH) Internal Hackathon (SatQuery AI for ISRO SAC)
+* **Top 33% Global** — Quackathon (International Hackathon, DevDuck AI)
 * **1st Place** — Technical Quiz, VCODE 2026 (CSE Department, Vignan University)
+* **Member** — Association for Computing Machinery (ACM)
 
 ---
 
